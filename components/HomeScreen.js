@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Button } from 'react-native';
-import ServiceScreen from './ServiceScreen';
-import { createStackNavigator } from 'react-navigation-stack';
-import CloudServantDrawer from './CloudServantDrawer';
-import { createAppContainer } from 'react-navigation';
 import UploadCard from './UploadCard';
-import { NavigationContainer, StackActions } from '@react-navigation/native';
 
 const HomeScreen = ({ navigation }) => {
     return (
