@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import BellIcon from 'react-bell-icon';
 
 class NotificationIconComponent extends Component {
     render() {
