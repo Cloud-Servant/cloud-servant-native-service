@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { View, StyleSheet, Text, Button } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+import React from 'react';
+import { View, StyleSheet, Button } from 'react-native';
 import UploadCard from './UploadCard';
 
 const UploadScreen = ({ navigation }) => {
