@@ -8,7 +8,7 @@ const AttendAtHome = ({ navigation }) => {
             <UploadCard style={styles.textContainer}>
                 <Text>Your Agent will be Arriving Soon!!</Text>
             </UploadCard>
-            <Button title="BACK" onPress={() => navigation.navigate('ServiceScreen')}></Button>
+            <Button title="BACK" onPress={() => navigation.navigate('PlaceOrderScreen')}></Button>
         </View>
     );
 }
