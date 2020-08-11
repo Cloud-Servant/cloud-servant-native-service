@@ -15,7 +15,7 @@ const AppDrawer = () => {
   const Drawer = createDrawerNavigator();
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="HomeScreen">
+      <Drawer.Navigator initialRouteName="PlaceOrderScreen">
         <Drawer.Screen name="HomeScreen" component={HomeStackDrawer} />
         <Drawer.Screen name="CallMeScreen" component={CallMeScreenStackDrawer} />
         <Drawer.Screen name="NotificationScreen" component={NotificationScreenStackDrawer} />
