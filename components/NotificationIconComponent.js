@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
+import { IconButton, Colors } from 'react-native-paper'
 
 class NotificationIconComponent extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Image
-                    source={require('../assets/bell-icon-2.png')}
-                    style={styles.IconContainer}
+                <IconButton
+                    icon="bell"
+                    color={Colors.black}
+                    size={25}
+                    onPress={() => console.log('Bell Pressed')}
                 />
             </View>
         )
