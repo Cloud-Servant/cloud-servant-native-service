@@ -2,3 +2,9 @@ node_modules
 .expo
 .expo-shared
 web-build
+_config.yml
+.github
+headers.js
+headers.txt
+SECURITY.md
+authToken.js
