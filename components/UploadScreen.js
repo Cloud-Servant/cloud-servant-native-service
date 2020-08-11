@@ -11,7 +11,7 @@ const UploadScreen = ({ navigation }) => {
                 </View>
                 <View style={styles.buttonContainer}>
                     <View style={styles.button}>
-                        <Button title="BACK" onPress={() => navigation.navigate('ServiceScreen')}></Button>
+                        <Button title="BACK" onPress={() => navigation.navigate('PlaceOrderScreen')}></Button>
                     </View>
                     <View style={styles.button}>
                         <Button title="SUBMIT" onPress={() => { }}></Button>
