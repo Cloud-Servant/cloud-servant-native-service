@@ -17,11 +17,13 @@ const PlaceOrderScreen = ({ navigation }) => {
     const [metrics, setMetrics] = useState([]);
     const [ismetricLoader, setMetricLoader] = useState(false);
     const [quantity, setQuantity] = useState(0);
-    // const [itemDisplayer, setItemDisplaying] = useState(false);
+    const [itemDisplay, setItemDisplaying] = useState(false);
 
     const metricPredictor = () => {
         // console.log('order',order)
         // metrics = []
+
+        const orderTracker = [];
         if (!order) {
             // setMetrics(['fuckoff'])
             alert('Please Enter the Order First')
@@ -33,6 +35,8 @@ const PlaceOrderScreen = ({ navigation }) => {
             console.log('Hi');
             setMetricLoader(false);
         }
+
+        orderTracker.push(order);
         if (
             order.search(/rice/i) >= 0 ||
             order.search(/basmati/i) >= 0 ||
@@ -103,7 +107,9 @@ const PlaceOrderScreen = ({ navigation }) => {
             alert('Please Enter the Order and Quantity to place an Order');
             setMetricLoader(false);
         }
-        console.log('Im here');
+        // console.log('Im here');
+        setItemDisplaying(true);
+        // console.log(itemDisplay);
     }
 
     return (
@@ -178,7 +184,14 @@ const PlaceOrderScreen = ({ navigation }) => {
                 <View style={styles.button}>
                     <Button title="PLACE ORDER" color="green"></Button>
                 </View>
-                <Text>Display this shit</Text>
+                {
+                    itemDisplay ?
+                        <View style={styles.orderDisplayer}>
+                            <Text style={styles.orderText}>{order}{' '}{' - '}{quantity}{' - '}{metrics[0]}</Text>
+                        </View>
+                        :
+                        null
+                }
             </View>
         </ScrollView>
     );
@@ -189,6 +202,13 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingTop: 10,
         alignItems: 'center',
+    },
+    orderDisplayer: {
+        marginTop: 100,
+    },
+    orderText: {
+        fontWeight: 'bold',
+        fontSize: 20
     },
     balanceMetrics: {
 
